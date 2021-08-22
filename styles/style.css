@@ -1316,7 +1316,7 @@ components
   left: -3px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: url(../../images/form-check.png);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/form-check.png?raw=true);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2125,7 +2125,7 @@ page
 .concept__thumb > .concept__parallax {
   position: relative;
   top: -200px;
-  background-image: url(../../../images/concept.jpg);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/concept.jpg?raw=true);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2336,19 +2336,19 @@ page
 }
 
 .menu__item:first-child > .menu__link {
-  background-image: url(../../../images/menu-living1.png);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-living1.png?raw=true);
 }
 
 .menu__item:first-child > .menu__link::before {
-  background-image: url(../../../images/menu-house1.png);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-house1.png?raw=true);
 }
 
 .menu__item:nth-child(2) > .menu__link {
-  background-image: url(../../../images/menu-living2.png);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-living2.png?raw=true);
 }
 
 .menu__item:nth-child(2) > .menu__link::before {
-  background-image: url(../../../images/menu-house2.png);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-house2.png?raw=true);
 }
 
 @media screen and (max-width: 599px) {
@@ -2358,11 +2358,11 @@ page
 }
 
 .menu__item:last-child > .menu__link {
-  background-image: url(../../../images/menu-living3.jpg);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-living3.png?raw=true);
 }
 
 .menu__item:last-child > .menu__link::before {
-  background-image: url(../../../images/menu-house3.png);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-house3.png?raw=true);
 }
 
 .menu__link {
@@ -2807,7 +2807,7 @@ page
   right: 0;
   width: 100%;
   height: 160%;
-  background-image: url(../../../images/kv1.jpg);
+  background-image: url(https://github.com/amahiro/pfhome/blob/main/images/kv1.jpg?raw=true);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
