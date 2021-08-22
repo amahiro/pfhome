@@ -57,17 +57,17 @@
     }
     &:first-child {
         > .menu__link {
-            background-image: url(../../../images/menu-living1.png);
+            background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-living1.png?raw=true);
             &::before {
-                background-image: url(../../../images/menu-house1.png);
+                background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-house1.png?raw=true);
             }
         }
     }
     &:nth-child(2) {
         > .menu__link {
-            background-image: url(../../../images/menu-living2.png);
+            background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-living2.png?raw=true);
             &::before {
-                background-image: url(../../../images/menu-house2.png);
+                background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-house2.png?raw=true);
             }
         }
     }
@@ -76,9 +76,9 @@
             margin-bottom: 0;
         }
         > .menu__link {
-            background-image: url(../../../images/menu-living3.jpg);
+            background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-living3.png?raw=true);
             &::before {
-                background-image: url(../../../images/menu-house3.png);
+                background-image: url(https://github.com/amahiro/pfhome/blob/main/images/menu-house3.png?raw=true);
             }
         }
     }
