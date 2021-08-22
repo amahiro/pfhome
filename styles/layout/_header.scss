@@ -1,0 +1,6 @@
+.header {
+    padding: 0 50px 15px;
+    @include mq(tab) {
+        padding: 15px 20px;
+    }
+}

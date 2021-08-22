@@ -1,0 +1,7 @@
+.is-heading {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-heading--open {
+    animation: fade-scale .3s forwards;
+}

@@ -1,0 +1,15 @@
+.logo {
+    width: 150px;
+    @include mq(sp) {
+        width: 120px;
+    }
+    @include mq(sp-sm) {
+        width: 60px;
+    }
+}
+.logo--f {
+    @extend .logo;
+    @include mq(sp-sm) {
+        width: 120px;
+    }
+}

@@ -1,0 +1,49 @@
+.hamburger {
+    display: none;
+    @include mq(tab) {
+        position: relative;
+        display: block;
+        z-index: $z-index-2;
+        &::before {
+            content: 'menu';
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: 1;
+            letter-spacing: .06em;
+            font-weight: bold;
+            @include font-size(10);
+            color: $font-color;
+            transition: all .3s;
+        }
+        &::after {
+            content: 'close';
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            line-height: 1;
+            letter-spacing: .06em;
+            font-weight: bold;
+            @include font-size(10);
+            color: $font-color;
+            opacity: 0;
+            transition: all .3s;
+        }
+    }
+}
+.hamburger__bar {
+    width: 32px;
+    height: 6px;
+    display: block;
+    background-color: #000;
+    &:first-child {
+        margin-bottom: 14px;
+    }
+    &:nth-child(2) {
+        margin-top: 14px;
+    }
+}

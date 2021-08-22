@@ -1,0 +1,28 @@
+.is-menu__heading {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-menu__heading--open {
+    animation: fade-scale .3s forwards;
+}
+.is-menu__message {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-menu__message--open {
+    animation: fade-scale .3s forwards;
+}
+.is-menu__item {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-menu__list--open {
+    > .is-menu__item {
+        animation: fade-scale .3s forwards;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: .15s * $i;
+            }
+        }
+    }
+}

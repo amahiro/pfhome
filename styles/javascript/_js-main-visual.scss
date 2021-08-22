@@ -1,0 +1,20 @@
+.is-main-visual__container {
+    opacity: 0;
+}
+.is-main-visual__container--open {
+    animation: fade .6s forwards;
+}
+.is-main-visual__title--open {
+    > .is-main-visual__text {
+        animation: fade-right .3s forwards;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: .15s * $i;
+            }
+        }
+    }
+}
+.is-main-visual__text {
+    opacity: 0;
+    transform: translateX(-20px);
+}

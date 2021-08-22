@@ -1,0 +1,56 @@
+.heading {
+    position: relative;
+    letter-spacing: .06em;
+    font-weight: bold;
+    @include font-size(40);
+    color: $font-color;
+    @include mq(sp) {
+        @include font-size(24);
+    }
+    @include mq(sp-sm) {
+        @include font-size(20);
+    }
+    &::before {
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: attr(data-heading);
+        text-transform: uppercase;
+        @include font-size(110);
+        color: $accent-color;
+        z-index: $z-index-10;
+        opacity: .25;
+        @include mq(sp) {
+            bottom: -10px;
+            @include font-size(60);
+        }
+        @include mq(sp-sm) {
+            @include font-size(55);
+        }
+    }
+}
+.heading--sm {
+    @extend .heading;
+    @include mq(tab) {
+        @include font-size(30);
+    }
+    @include mq(sp) {
+        @include font-size(24);
+    }
+    @include mq(sp-sm) {
+        @include font-size(20);
+    }
+    &::before {
+        @include mq(tab) {
+            @include font-size(95);
+        }
+        @include mq(sp) {
+            bottom: -10px;
+            @include font-size(60);
+        }
+        @include mq(sp-sm) {
+            @include font-size(55);
+        }
+    }
+}

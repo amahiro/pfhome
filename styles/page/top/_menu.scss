@@ -1,0 +1,181 @@
+.menu {
+    position: relative;
+    padding-bottom: 150px;
+    @include mq(tab) {
+        padding-bottom: 120px;
+    }
+    @include mq(sp) {
+        padding-bottom: 80px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: $color-gray;
+        z-index: $z-index-11;
+    }
+}
+.menu__message {
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.6;
+    letter-spacing: .06em;
+    @include font-size(18);
+    color: $font-color;
+    @include mq(sp) {
+        line-height: 1.8;
+        @include font-size(14);
+    }
+    @include mq(sp-sm) {
+        @include font-size(12);
+    }
+}
+.menu__heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.menu__list {
+    margin-bottom: 40px;
+    &.flex {
+        @include mq(sp) {
+            flex-direction: column;
+        }
+    }
+}
+.menu__item {
+    position: relative;
+    width: 32%;
+    @include mq(sp) {
+        margin-bottom: 80px;
+        width: 100%;
+    }
+    @include mq(sp-sm) {
+        margin-bottom: 40px;
+    }
+    &:first-child {
+        > .menu__link {
+            background-image: url(../../../images/menu-living1.png);
+            &::before {
+                background-image: url(../../../images/menu-house1.png);
+            }
+        }
+    }
+    &:nth-child(2) {
+        > .menu__link {
+            background-image: url(../../../images/menu-living2.png);
+            &::before {
+                background-image: url(../../../images/menu-house2.png);
+            }
+        }
+    }
+    &:last-child {
+        @include mq(sp) {
+            margin-bottom: 0;
+        }
+        > .menu__link {
+            background-image: url(../../../images/menu-living3.jpg);
+            &::before {
+                background-image: url(../../../images/menu-house3.png);
+            }
+        }
+    }
+}
+.menu__link {
+    display: block;
+    padding: 400px 20px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include mq(tab) {
+        padding: 300px 15px 15px;
+    }
+    @include mq(tab-sm) {
+        padding: 250px 15px 15px;
+    }
+    @include mq(sp) {
+        padding: 300px 20px 20px;
+    }
+    @include mq(sp-sm) {
+        padding: 240px 15px 15px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transition: opacity .2s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-black;
+        opacity: .2;
+    }
+    &:hover {
+        >.menu__title {
+            background-color: $accent-color;
+            color: $color-white;
+        }
+        &::before {
+            opacity: 0;
+        }
+    }
+}
+.menu__number {
+    position: absolute;
+    top: -55px;
+    left: -10px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-family: $luxus-brut;
+    transform: rotate(-10deg);
+    @include font-size(70);
+    color: $accent-color;
+    z-index: $z-index-4;
+    @include mq(tab) {
+        top: -30px;
+        @include font-size(45);
+    }
+    @include mq(sp) {
+        top: -55px;
+        @include font-size(70);
+    }
+    @include mq(sp-sm) {
+        top: -30px;
+        @include font-size(50);
+    }
+}
+.menu__title {
+    position: relative;
+    padding: 10px 0;
+    letter-spacing: .06em;
+    background-color: $color-white;
+    text-align: center;
+    font-weight: bold;
+    @include font-size(20);
+    color: $font-color;
+    z-index: $z-index-7;
+    transition: all .2s;
+    @include mq(tab) {
+        @include font-size(16);
+    }
+    @include mq(sp-sm) {
+        padding: 5px 0;
+        @include font-size(14);
+    }
+}
+.menu__btn {
+    text-align: center;
+}

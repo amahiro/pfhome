@@ -1,0 +1,56 @@
+@keyframes hamburger-bar-top-menu {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(8px);
+    }
+    90% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes hamburger-bar-bottom-menu {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-8px);
+    }
+    90% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes hamburger-bar-top-close {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(8px);
+    }
+    90% {
+        transform: translateY(8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes hamburger-bar-bottom-close {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-8px);
+    }
+    90% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,63 @@
+.gnav {
+    @include mq(tab) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: $z-index-3;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .2s;
+    }
+}
+.gnav__list {
+    @include mq(tab) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &.flex {
+        justify-content: flex-end;
+        @include mq(tab) {
+            flex-direction: column;
+        }
+    }
+}
+.gnav__item {
+    margin-left: 30px;
+    @include mq(tab) {
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    &:first-child {
+        margin-left: 0;
+    }
+}
+.gnav__item--contact {
+    background-color: $accent-color;
+    @include mq(tab) {
+        background-color: transparent;
+    }
+    >.gnav__link {
+        display: block;
+        padding: 20px 30px;
+        color: $color-white;
+        @include mq(tab) {
+            color: $font-color;
+            padding: 0;
+        }
+    }
+}
+.gnav__link {
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    @include font-size(16);
+    color: $font-color;
+    @include mq(tab) {
+        font-weight: bold;
+        @include font-size(18);
+    }
+}

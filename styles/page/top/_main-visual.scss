@@ -1,0 +1,120 @@
+.main-visual {
+    position: relative;
+    height: 100%;
+    @include mq(sp) {
+        height: 60%;
+    }
+}
+.main-visual__outer {
+    padding: 0 50px;
+    height: 100%;
+    @include mq(tab) {
+        padding: 0 20px;
+    }
+}
+.main-visual__swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-black;
+        opacity: .4;
+        z-index: $z-index-5;
+    }
+}
+.main-visual__swiper-wrapper {
+    height: 100%;
+}
+.main-visual__swiper-slide {
+    height: 100%;
+}
+.main-visual__image {
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide-active .main-visual__image,
+.swiper-slide-duplicate-active .main-visual__image,
+.swiper-slide-prev .main-visual__image {
+    animation: swiper-scale 10s linear 0s 1 normal both;  
+}
+.main-visual__title {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    z-index: $z-index-3;
+    @include mq(tab) {
+        left: 20px;
+    }
+    @include mq(sp) {
+        top: auto;
+        bottom: 20px;
+        transform: unset;
+    }
+    @include mq(sp-sm) {
+        left: 10px;
+        bottom: 10px;
+    }
+    &.flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+.main-visual__text {
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: .06em;
+    margin-bottom: 20px;
+    background-color: $color-white;
+    font-weight: bold;
+    @include font-size(40);
+    color: $font-color;
+    @include mq(sp) {
+        margin-bottom: 10px;
+        @include font-size(30);
+    }
+    @include mq(sp-sm) {
+        @include font-size(24);
+    }
+}
+.main-visual__scroll-down {
+    display: inline-block;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 100px;
+    right: 100px;
+    letter-spacing: .06em;
+    @include font-size(18);
+    color: $color-white;
+    writing-mode: vertical-lr;
+    z-index: $z-index-4;
+    @include mq(tab) {
+        right: 30px;
+    }
+    @include mq(sp) {
+        bottom: -30px;
+        @include font-size(14);
+        color: $accent-color;
+    }
+    &::after {
+        content: '';
+        animation: scroll-down 2s cubic-bezier(1, 0, 0, 1) infinite;
+        display: inline-block;
+        margin-top: 10px;
+        width: 1px;
+        height: 100px;
+        background-color: $color-white;
+        @include mq(sp) {
+            background-color: $accent-color;
+        }
+    }
+}

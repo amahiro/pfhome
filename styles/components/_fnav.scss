@@ -1,0 +1,25 @@
+.fnav {
+    width: 300px;
+    @include mq(sp) {
+        width: 100%;
+    }
+}
+.fnav__item {
+    margin: 0 15px 30px;
+    @include mq(sp) {
+        text-align: center;
+        margin: 0 0 20px;
+        width: 50%;
+    }
+}
+.fnav__link {
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    font-weight: bold;
+    @include font-size(16);
+    color: $color-white;
+    transition: all .3s;
+    &:hover {
+        color: $accent-color;
+    }
+}

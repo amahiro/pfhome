@@ -1,0 +1,39 @@
+.btn {
+    > a,input[type="submit"] {
+        display: inline-block;
+        padding: 20px 100px;
+        letter-spacing: .06em;
+        background-color: $color-white;
+        border: 4px solid $accent-color;
+        font-weight: bold;
+        @include font-size(18);
+        color: $accent-color;
+        transition: all .3s;
+        @include mq(sp) {
+            border: 2px solid $accent-color;
+            padding: 15px 60px;
+            @include font-size(16);
+        }
+        @include mq(sp) {
+
+            padding: 10px 50px;
+            @include font-size(14);
+        }
+        &:hover {
+            background-color: $accent-color;
+            color: $color-white;
+        }
+    }
+}
+.btn--color-oppose {
+    @extend .btn;
+    > a {
+        border: none;
+        background-color: $accent-color;
+        color: $color-white;
+        &:hover {
+            background-color: $color-white;
+            color: $accent-color;
+        }
+    }
+}

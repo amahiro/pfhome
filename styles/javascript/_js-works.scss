@@ -1,0 +1,14 @@
+.is-works__heading {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-works__heading--open {
+    animation: fade-scale .3s forwards;
+}
+.is-works__list {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-works__list--open {
+    animation: fade-scale .3s forwards;
+}

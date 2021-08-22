@@ -1,0 +1,26 @@
+.is-hamburger {
+    >.hamburger__bar {
+        animation: hamburger-bar-top-menu .6s forwards;
+        &:last-child {
+            animation: hamburger-bar-bottom-menu .6s forwards;
+        }
+    }
+}
+.is-hamburger--open {
+    >.hamburger__bar {
+        animation: hamburger-bar-top-close .6s forwards;
+        &:last-child {
+            animation: hamburger-bar-bottom-close .6s forwards;
+        }
+    }
+    &::before {
+        opacity: 0;
+    }
+    &::after {
+        opacity: 1;
+    }
+    & + .gnav {
+        opacity: 1;
+        visibility: visible;
+    }
+}

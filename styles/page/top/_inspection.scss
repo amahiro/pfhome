@@ -1,0 +1,74 @@
+.inspection {
+    position: relative;
+    padding: 150px 0;
+    overflow: hidden;
+    @include mq(tab) {
+        padding: 120px 0;
+    }
+    @include mq(sp) {
+        padding: 80px 0;
+    }
+}
+.inspection__title {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: .06em;
+    font-weight: bold;
+    @include font-size(50);
+    color: $color-white;
+    @include mq(sp) {
+        margin-bottom: 20px;
+        @include font-size(36);
+    }
+    @include mq(sp-sm) {
+        @include font-size(28);
+    }
+}
+.inspection__text {
+    display: block;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: .06em;
+    line-height: 1.6;
+    font-weight: bold;
+    @include font-size(20);
+    color: $color-white;
+    @include mq(sp) {
+        @include font-size(14);
+    }
+    @include mq(sp-sm) {
+        @include font-size(12);
+    }
+}
+.inspection__btn {
+    text-align: center;
+}
+.inspection__parallax {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 160%;
+    background-image: url(../../../images/kv1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: $z-index-11;
+    @include mq(sp) {
+        top: 0;
+        height: 100%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-black;
+        opacity: .6;
+        z-index: $z-index-10;
+    }
+}

@@ -1,0 +1,23 @@
+.is-inspection--open {
+    .is-inspection__title {
+        animation: fade-scale .3s forwards;
+    }
+    .is-inspection__text {
+        animation: fade-scale .3s forwards;
+    }
+    .is-inspection__btn {
+        animation: fade-scale .3s forwards;
+    }
+}
+.is-inspection__title {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-inspection__text {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-inspection__btn {
+    opacity: 0;
+    transform: scale(0);
+}

@@ -1,0 +1,17 @@
+.inner {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+    @include mq(tab) {
+        padding: 0 20px;
+        width: 100%
+    }
+}
+.inner--sm {
+    @extend .inner;
+    width: 60%;
+    @include mq(tab) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}

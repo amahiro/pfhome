@@ -1,0 +1,7 @@
+.is-fade {
+    transform: scale(.9);
+    opacity: 0;
+}
+.is-fade--open {
+    animation: fade-scale .6s forwards;
+}

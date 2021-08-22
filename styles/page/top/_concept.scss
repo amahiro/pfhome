@@ -1,0 +1,108 @@
+.concept {
+    padding: 150px 0;
+    @include mq(tab) {
+        padding: 120px 0;
+    }
+    @include mq(sp) {
+        padding: 80px 0;
+    }
+}
+.concept__outer {
+    position: relative;
+    padding: 100px 0;
+    @include mq(tab) {
+        padding: 0;
+    }
+}
+.concept__thumb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 75%;
+    overflow: hidden;
+    > .concept__parallax {
+        position: relative;
+        top: -200px;
+        background-image: url(../../../images/concept.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 140%;
+        @include mq(tab) {
+            top: -130px;
+            height: 170%;
+        }
+        @include mq(sp) {
+            top: 0;
+            height: 100%;
+        }
+    }
+    @include mq(tab) {
+        position: relative;
+        width: 85%;
+        height: 400px;
+        margin-left: auto;
+        transform: translateY(-100px);
+    }
+    @include mq(sp) {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        transform: translate(0);
+    }
+    @include mq(sp-sm) {
+        height: 180px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-black;
+        opacity: .3;
+    }
+}
+.concept__content {
+    display: inline-block;
+    position: relative;
+    padding: 130px 100px 100px 50px;
+    background-color: $color-white;
+    z-index: $z-index-8;
+    @include mq(tab) {
+        padding: 0 50px 50px;
+    }
+    @include mq(sp) {
+        padding: 0 0 40px;
+        width: 100%;
+    }
+}
+.concept__heading {
+    margin-bottom: 40px;
+    @include mq(sp) {
+        text-align: center;
+    }
+}
+.concept__lead {
+    margin-bottom: 40px;
+    line-height: 1.6;
+    letter-spacing: .06em;
+    @include font-size(14);
+    color: $font-color;
+    @include mq(sp) {
+        line-height: 1.8;
+        text-align: center;
+        width: 100%;
+    }
+    @include mq(sp-sm) {
+        @include font-size(12);
+    }
+}
+.concept__btn {
+    @include mq(sp) {
+        text-align: center;
+    }
+}

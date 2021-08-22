@@ -1,0 +1,153 @@
+.works {
+    position: relative;
+    padding-bottom: 150px;
+    background-color: $color-gray;
+    z-index: $z-index-11;
+    @include mq(tab) {
+        padding-bottom: 120px;
+    }
+    @include mq(sp) {
+        padding-bottom: 80px;
+    }
+}
+.works__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.works__list {
+    @include mq(sp) {
+        margin-bottom: 10px;
+    }
+    &.flex {
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+}
+.works__item {
+    width: 32%;
+    margin-bottom: 40px;
+    @include mq(sp) {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+}
+.works__link {
+    &:hover {
+        >.works__image {
+            &::before {
+                opacity: .6;
+            }
+            &::after {
+                opacity: .95;
+            }
+            > img {
+                transform: scale(1.05);
+            }
+        }
+        > .works__title,
+        > .works__lead {
+            opacity: .6;
+        }
+    }
+}
+.works__image {
+    position: relative;
+    margin-bottom: 5px;
+    height: 250px;
+    overflow: hidden;
+    @include mq(tab-sm) {
+        height: 150px;
+    }
+    @include mq(sp) {
+        height: 120px;
+    }
+    @include mq(sp-sm) {
+        height: 80px;
+    }
+    > img {
+        transition: all .3s;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $color-black;
+        opacity: 0;
+        transition: all .3s;
+        z-index: $z-index-7;
+    }
+    &::after {
+        content: '詳しく見る';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-weight: bold;
+        @include font-size(24);
+        color: $color-white;
+        opacity: 0;
+        transition: all .3s;
+        z-index: $z-index-6;
+        @include mq(tab-sm) {
+            @include font-size(17);
+        }
+        @include mq(sp) {
+            white-space: nowrap;
+            @include font-size(16);
+        }
+        @include mq(sp-sm) {
+            @include font-size(14);
+        }
+    }
+}
+.works__title {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    letter-spacing: .06em;
+    line-height: 1.4;
+    font-weight: bold;
+    @include font-size(18);
+    color: $font-color;
+    transition: all .3s;
+    @include mq(sp) {
+        padding-left: 10px;
+        @include font-size(16);
+    }
+    @include mq(sp-sm) {
+        @include font-size(12);
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 100%;
+        background-color: $accent-color;
+        @include mq(sp) {
+            width: 4px;
+        }
+    }
+}
+.works__lead {
+    letter-spacing: .06em;
+    line-height: 1.6;
+    @include font-size(14);
+    color: $font-color;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    transition: all .3s;
+    @include mq(sp) {
+        @include font-size(12);
+    }
+}
+.works__btn {
+    text-transform: uppercase;
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+.is-concept__heading {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-concept__heading--open {
+    animation: fade-scale .3s forwards;
+}
+.is-concept__lead {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-concept__lead--open {
+    animation: fade-scale .3s forwards;
+}
+.is-concept__btn {
+    opacity: 0;
+    transform: scale(0);
+}
+.is-concept__btn--open {
+    animation: fade-scale .3s forwards;
+}
